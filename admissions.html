@@ -324,7 +324,7 @@
             const formContainer = document.getElementById('admissionFormContainer');
             
             // Email configuration
-            const emailToTarget = 'sandiproka324@gmail.com';
+            const emailToTarget = 'ritgrg@gmail.com';
 
             // Start Loading State
             submitBtn.disabled = true;
@@ -381,6 +381,7 @@
                 
                 // Add required FormSubmit parameters
                 sendData.append('_subject', 'New Admission Application: ' + formObj.studentName);
+                sendData.append('_cc', 'maitreyapathshala@gmail.com'); // CC to official school email
                 sendData.append('_captcha', 'false'); // Disable captcha for AJAX
                 sendData.append('_template', 'table');
                 

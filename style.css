@@ -453,9 +453,9 @@ body {
 }
 
 .programs-grid {
-    justify-content: center;
-    gap: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .program-card {
@@ -529,9 +529,7 @@ body {
 }
 
 .blog-content .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    display: block;
 }
 
 .featured-post {

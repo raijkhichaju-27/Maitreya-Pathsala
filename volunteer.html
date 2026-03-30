@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer | Maitreya Pathshala - The Pokhara Waldorf School</title>
+
+    <meta name="description" content="Volunteer at Maitreya Pathshala Waldorf School and Biodynamic Farm in Pokhara, Nepal. Join us in school activities, teaching, farm work and more.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lanchitas&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Volunteer Hero Banner */
+        .volunteer-hero {
+            background: linear-gradient(rgba(107, 50, 7, 0.55), rgba(107, 50, 7, 0.45)), url('assets/5.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 90px 0 80px;
+            position: relative;
+        }
+
+        .volunteer-hero h1 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .breadcrumb i {
+            font-size: 0.75rem;
+        }
+
+        .breadcrumb span {
+            opacity: 0.8;
+        }
+
+        /* Main Content Area */
+        .volunteer-body {
+            padding: 70px 0 80px;
+            background: white;
+        }
+
+        .volunteer-article {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .volunteer-article h2 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 2.4rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .volunteer-article .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .volunteer-article .body-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .volunteer-article .activity-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 35px;
+        }
+
+        .volunteer-article .activity-list li {
+            position: relative;
+            padding: 14px 20px 14px 55px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        .volunteer-article .activity-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.1);
+        }
+
+        .volunteer-article .activity-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        /* Farm Section */
+        .farm-highlight {
+            background: linear-gradient(135deg, rgba(255, 249, 245, 0.9), rgba(255, 242, 235, 0.7));
+            border: 1px solid rgba(249, 115, 22, 0.15);
+            border-radius: 15px;
+            padding: 35px 30px;
+            margin: 35px 0;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .farm-highlight-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(249, 115, 22, 0.25);
+        }
+
+        .farm-highlight-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .farm-highlight-text h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .farm-highlight-text p {
+            color: var(--gray);
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+
+        /* Contact CTA */
+        .volunteer-contact {
+            text-align: center;
+            margin-top: 45px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 15px;
+            color: white;
+        }
+
+        .volunteer-contact h3 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .volunteer-contact p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-btn.email {
+            background: white;
+            color: var(--primary);
+        }
+
+        .contact-btn.email:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-btn.whatsapp {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .contact-btn.whatsapp:hover {
+            background: #25D366;
+            border-color: #25D366;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-btn.phone {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .contact-btn.phone:hover {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Share Section */
+        .share-section {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .share-section span {
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.whatsapp-share { background: #25D366; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .volunteer-hero {
+                padding: 70px 0 60px;
+            }
+
+            .volunteer-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .volunteer-body {
+                padding: 50px 0 60px;
+            }
+
+            .volunteer-article h2 {
+                font-size: 2rem;
+            }
+
+            .volunteer-article .intro-text,
+            .volunteer-article .body-text {
+                font-size: 1rem;
+            }
+
+            .farm-highlight {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 25px 20px;
+            }
+
+            .volunteer-contact {
+                padding: 30px 20px;
+            }
+
+            .volunteer-contact h3 {
+                font-size: 1.5rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .volunteer-hero h1 {
+                font-size: 2rem;
+            }
+
+            .volunteer-article h2 {
+                font-size: 1.8rem;
+            }
+
+            .volunteer-article .activity-list li {
+                padding: 12px 15px 12px 45px;
+                font-size: 0.95rem;
+            }
+
+            .volunteer-article .activity-list li::before {
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Maitreya Pathshala Logo" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="admissions.html">ADMISSIONS</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="parent-education.html">PARENT EDUCATION</a>
+                <a href="volunteer.html" class="active">VOLUNTEER</a>
+                <a href="blog.html">BLOG</a>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <a href="parent-education.html">PARENT EDUCATION</a>
+                    <a href="volunteer.html" class="active">VOLUNTEER</a>
+                    <a href="blog.html">BLOG</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- VOLUNTEER HERO BANNER -->
+    <section class="volunteer-hero">
+        <div class="container">
+            <h1>Volunteer</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Volunteer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="volunteer-body">
+        <article class="volunteer-article">
+
+            <h2>Volunteer in our School and Biodynamic Farm</h2>
+
+            <p class="intro-text">
+                Join us as a volunteer at our Waldorf School and take part in a variety of hands-on, meaningful activities. Whether you're helping in the classroom or contributing to the daily rhythm of the school and farm, your support makes a real difference.
+            </p>
+
+            <p class="body-text">As a volunteer, you can engage in:</p>
+
+            <ul class="activity-list">
+                <li>Various activities of school such as handwork, woodwork, gardening, painting, music, games etc.</li>
+                <li>Assisting the class teacher in daily lessons and classroom activities</li>
+                <li>Cleaning and maintaining the school — caring for our beautiful learning spaces</li>
+                <li>Farm activities — planting, harvesting, composting and nurturing the land on our biodynamic farm</li>
+            </ul>
+
+            <!-- Biodynamic Farm Highlight -->
+            <div class="farm-highlight">
+                <div class="farm-highlight-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="farm-highlight-text">
+                    <h3>Our Biodynamic Farm</h3>
+                    <p>Our school is deeply connected to an 8-acre biodynamic farm. Volunteers have the unique opportunity to work the land using sustainable, anthroposophical farming practices — experiencing the living connection between earth, food, and community that is at the heart of Waldorf education.</p>
+                </div>
+            </div>
+
+            <p class="body-text">
+                If you are interested in volunteering, please contact us. We look forward to welcoming you into our community!
+            </p>
+
+            <!-- Contact CTA -->
+            <div class="volunteer-contact" id="volunteer-contact">
+                <h3>Interested in Volunteering?</h3>
+                <p>Reach out to us and become part of the Maitreya Pathshala family</p>
+                <div class="contact-buttons">
+                    <a href="mailto:maitreyapathshala@gmail.com" class="contact-btn email" id="volunteer-email-btn">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                    <a href="https://wa.me/9779846526728" target="_blank" class="contact-btn whatsapp" id="volunteer-whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="tel:061580241" class="contact-btn phone" id="volunteer-phone-btn">
+                        <i class="fas fa-phone"></i> Call Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Share Section -->
+            <div class="share-section">
+                <span>Share on:</span>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://maitreyapathshala.edu.np/volunteer" target="_blank" class="share-btn facebook" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/?text=Volunteer%20at%20Maitreya%20Pathshala%20Waldorf%20School%20https://maitreyapathshala.edu.np/volunteer" target="_blank" class="share-btn whatsapp-share" title="Share on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+        </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>Maitreya Pathshala</h3>
+                        <p>The Pokhara Waldorf School</p>
+                    </div>
+                    <p>Providing quality Waldorf education with experienced faculty for holistic development.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/maitreyapathshala" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Follow us on Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="parent-education.html">Parent Education</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Kundahar, BP Marga, Pokhara-13</span></li>
+                        <li><i class="fas fa-phone"></i> <span>061580241</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <span>9846526728 (WhatsApp)</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>maitreyapathshala@gmail.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Sun-Fri: 9:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maitreya Pathshala - The Pokhara Waldorf School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

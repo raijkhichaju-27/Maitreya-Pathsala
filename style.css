@@ -206,7 +206,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('assets/pattern.png');
     opacity: 0.05;
 }
 
@@ -1151,7 +1150,7 @@ footer {
 
 /* About Page Specific Styles */
 .about-hero {
-    background: linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)), url('assets/blog1.png');
+    background: linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)), url('assets/blog1.jpg');
     background-size: cover;
     background-position: center;
     color: white;

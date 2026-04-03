@@ -205,8 +205,40 @@ document.addEventListener('DOMContentLoaded', () => {
         copyright.innerHTML = copyright.innerHTML.replace('2024', new Date().getFullYear());
     }
     
-    // Update active nav link based on current page
     const pathname = window.location.pathname;
+
+    // Announcement Popup Logic (Site-wide with Exclusions)
+    function showAnnouncement() {
+        // Exclude Admissions and Blog pages
+        const isExcluded = pathname.includes('/admissions/') || pathname.includes('/blog/');
+        if (isExcluded) return;
+
+        // Create modal if it doesn't exist
+        if (!document.getElementById('modal-announcement')) {
+            const modalHTML = `
+                <div class="modal-overlay announcement-modal" id="modal-announcement">
+                    <div class="modal-container announcement-container">
+                        <div class="modal-close announcement-close" onclick="closeModal()" aria-label="Close Announcement">&times;</div>
+                        <div class="modal-body announcement-body">
+                            <div class="announcement-image-wrapper">
+                                <img src="/assets/popup.png" alt="Special Announcement - Admissions Open 2026" class="announcement-img">
+                                <a href="/admissions/" class="enroll-hotspot" aria-label="Enroll Now"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        }
+
+        // Show popup on every load (per user request)
+        setTimeout(() => {
+            openModal('announcement');
+        }, 1000);
+    }
+
+    showAnnouncement();
+
+    // Update active nav link based on current page
     const desktopNavLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
     
     desktopNavLinks.forEach(link => {

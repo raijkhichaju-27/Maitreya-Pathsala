@@ -1623,7 +1623,101 @@ footer {
 
 .modal-overlay.active .modal-container {
     transform: scale(1);
+    animation: modalPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+@keyframes modalPop {
+    from { opacity: 0; transform: scale(0.7) translateY(30px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Announcement Modal Specifics */
+.announcement-container {
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+    max-width: 600px;
+    display: block;
+    border-radius: 0; /* Reset for wrapper logic */
+}
+
+.announcement-body {
+    padding: 0;
+}
+
+.announcement-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.announcement-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.enroll-hotspot {
+    position: absolute;
+    top: 63%;
+    left: 17%;
+    width: 26%;
+    height: 9%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0); /* Invisible */
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.enroll-hotspot:hover {
+    background: rgba(46, 204, 113, 0.1); /* Very subtle green hint */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Refined Close Button for higher prominence */
+.announcement-modal .announcement-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary); /* Maitreya Orange */
+    color: #ffffff !important; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900; /* Extra bold 'X' */
+    cursor: pointer;
+    z-index: 2002;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border: 3px solid #ffffff;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.announcement-modal .announcement-close:hover {
+    transform: scale(1.1) rotate(90deg);
+    background: var(--primary-dark);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .announcement-container {
+        max-width: 85%;
+    }
+    .announcement-close {
+        top: -15px;
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
 
 .modal-header {
     padding: 30px 40px 15px;
